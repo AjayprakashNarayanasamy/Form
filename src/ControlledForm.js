@@ -13,65 +13,85 @@ function ControlledForm()
     const[f,setf] = React.useState("");
 
     var a = {};
-    const handleReset=()=>
-    {
-       a.first="";
-       a.last="";
-       a.email="";
-       a.gender="";
-       
-       
-    }
+    const handleReset = () => {
+      setfirstName("");
+      setlastName("");
+      setEmail("");
+      setGender("");
+      setCourse("");
+    };
+//     const handleReset = () => {
+//     setfirstName("");
+//     setlastName("");
+//     setEmail("");
+//     setGender("");
+//     setCourse("");
+//   };
+
+
+    
     
     const handleSubmit=(e)=>
     {
        
      e.preventDefault();
      a={first:firstName,last:lastName, email:Email,gender:gender,course:Courses}
-    
+     console.log(a.first , a.last +"submit")
    
 
      if(a.first=="" && a.last==""&&a.email==""&&a.gender=="" )
      {
+      
          setf("Enter the feilds")
+       
+         
+        
+        
      }
      else{
     
      if(a.first=="")
      {
+     
         setEfirstName("Enter the Name")
+      
      }
      if(a.last=="")
      {
         setlEastName("Enter the Last name")
+        
      }
      if(a.email=="")
      {
         setEEmail("Enter the Email Address")
+      
      }
      if(a.gender=="")
      {
         setEGender("Select the Gender")
+        
+        
      }
-   
-   
-   
-   
-    }
-    
-    }
+     setf("")
      
    
    
-    return(
+   
+    }
+   
+    }
+     
+    console.log(firstName,lastName,Email,gender,Courses)
+   
+    return( 
     
-         <div>
+         <div className="div1">
             
         <h1>Controlled Form</h1>
         <form >
             <div>
                 <label>First Name:</label>
-                <input type="text" value={firstName} name="firstName" onChange={(e)=>setfirstName(e.target.value)}/>
+                <input type="text" required value={firstName} name="firstName" onChange={(e)=>setfirstName(e.target.value ) }/>
                 <br></br>
                <span>{EFirstName}</span>
               
@@ -104,8 +124,10 @@ function ControlledForm()
                 <option>Mongo</option>
                 </select>
             </div><br></br>
-            <button type = "submit" onClick={(e)=>handleSubmit(e)}>Sumbmit</button>&nbsp;
-            <button type = "submit" onClick={()=>handleReset()}>Reset</button>&nbsp;
+            <button type = "submit" onClick={(e)=>handleSubmit(e)}>Submit</button>&nbsp;
+            <button type="reset" onClick={handleReset }>
+          Reset
+        </button>
             <div>{f}</div>
         </form>
         </div>
