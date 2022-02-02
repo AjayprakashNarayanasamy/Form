@@ -36,7 +36,7 @@ function ControlledForm()
        
      e.preventDefault();
      a={first:firstName,last:lastName, email:Email,gender:gender,course:Courses}
-     console.log(a.first , a.last +"submit")
+    
    
 
      if(a.first=="" && a.last==""&&a.email==""&&a.gender=="" )
@@ -72,7 +72,7 @@ function ControlledForm()
         
         
      }
-     setf("")
+
      
    
    
@@ -81,7 +81,7 @@ function ControlledForm()
    
     }
      
-    console.log(firstName,lastName,Email,gender,Courses)
+
    
     return( 
     
