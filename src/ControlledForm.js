@@ -54,7 +54,7 @@ function ControlledForm()
         
      }
      else{
-    
+   
      if(a.first=="")
      {
      
@@ -90,38 +90,38 @@ function ControlledForm()
    
     return( 
     
-         <div className="div1">
+         <div className="div2">
             
-        <h1>Controlled Form</h1>
+        <h1 className="div3">Controlled Form</h1>
         <form >
             <div>
-                <label>First Name:</label>
-                <input type="text" required value={firstName} name="firstName" onChange={(e)=>setfirstName(e.target.value ) }/>
+                <label className="div3">First Name:</label>
+                <input type="text" required value={firstName} name="firstName" onChange={(e)=>setfirstName(e.target.value,setf(""), setEfirstName("") ) }/>
                 <br></br>
-               <span>{EFirstName}</span>
+               <span className="div1">{EFirstName}</span>
               
             </div><br></br>
             <div>
-                <label>Last Name:</label>
-                <input type="text" value={lastName} name="lastName" onChange={(e)=>setlastName(e.target.value)} />
+                <label className="div3">Last Name:</label>
+                <input type="text" value={lastName} name="lastName" onChange={(e)=>setlastName(e.target.value,setf(""),setlEastName(""))} />
                 <br></br>
-               <span>{ELastName}</span>
+               <span className="div1">{ELastName}</span>
             </div><br></br>
             <div>
-                <label>Email:</label>
-                <input type="text" value = {Email}name="Email" onChange={(e)=>setEmail(e.target.value)}/>
+                <label className="div3">Email:</label>
+                <input type="text" value = {Email}name="Email" onChange={(e)=>setEmail(e.target.value,setf(""),setEEmail(""))}/>
                 <br></br>
-               <span>{EEmail}</span>
+               <span className="div1">{EEmail}</span>
             </div><br></br>
             <div>
-                <label>gender:</label>
-                <input type="radio" name="gender" value="male" onChange={(e)=>setGender(e.target.value)}/> Male
-                <input type="radio" name="gender" value="female" onChange={(e)=>setGender(e.target.value)}/> Female
+                <label className="div3">gender:</label>
+                <input type="radio" name="gender" value="male" onChange={(e)=>setGender(e.target.value,setf(""),setEGender(""))}/> <span className="div3">Male</span>
+                <input type="radio" name="gender" value="female" onChange={(e)=>setGender(e.target.value,setf(""),setEGender(""))}/><span className="div3">Female</span>
                 <br></br>
-               <span>{EGender}</span>
+               <span className="div1">{EGender}</span>
             </div><br></br>
             <div>
-                <label>Courses:</label>
+                <label className="div3">Courses:</label>
                 <select name = "courses" value={Courses}  onChange={(e)=>setCourse(e.target.value)}>
                 <option>React</option>
                 <option>Angular</option>
@@ -133,7 +133,7 @@ function ControlledForm()
             <button type="reset" onClick={handleReset }>
           Reset
         </button>
-            <div>{f}</div>
+            <div className="div1">{f}</div>
         </form>
         </div>
     )
