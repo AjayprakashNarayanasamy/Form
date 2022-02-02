@@ -19,6 +19,11 @@ function ControlledForm()
       setEmail("");
       setGender("");
       setCourse("");
+      setEfirstName("");
+      setlEastName("");
+      setEEmail("");
+      setEGender("");
+      setf("");
     };
 //     const handleReset = () => {
 //     setfirstName("");
